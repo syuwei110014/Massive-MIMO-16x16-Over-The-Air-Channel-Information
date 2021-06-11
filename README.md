@@ -199,6 +199,7 @@ After finishing the execution, you can switch to the HPDSCH folder to capture th
 <p align="center">
 Fig. 14. Produce Channel Information Data in HPDSCH Folder
 </p>
+
 ### 3.2.3  Matlab Operating Instructions
 After executing Channel_est.exe, enter two kinds of values.
 
