@@ -1,15 +1,15 @@
 # User Manual
 This web page provides the measured channel matrices of the MIMO-OFDM system with 16 transmit antennas and 20 receiver antennas.
-### 1) Frame Architecure
+### 1. Frame Architecure
     1.1	Time & Frequency Domain Specification
     1.2	Noise Regularization
     1.3	Data Conversion Process
-### 2) Scenarios Description
+### 2. Scenarios Description
     2.1	Centralized Base Station + Non-Folding Terminal
     2.2	Distributed Base Station + Non-Folding Terminal
     2.3	Centralized Base Station + Folding Terminal
     2.2	Distributed Base Station + Folding Terminal
-### 3) Operating Instructions
+### 3. Operating Instructions
     3.1	Download the OTA measurement
     3.2	Channel Estimation
             3.2.1  Download Channel Estimation Package
