@@ -97,7 +97,7 @@ Fig. 9. Compressed Row IQ Data
 
 Download the data of your desire scenario, and then decompress it to get the following IQ data files. Each scenario contains about 1000 records of the received signal, which is from iqdata1 to iqdata1000. Each record contains 20 Rx channels. All the data are stored in the time domain IQ data format. Iqdata1 represents the first record, ch20 represents the 20th Rx antenna of the first record.
 
-<img src="https://user-images.githubusercontent.com/42632656/121654649-86e38c80-cad0-11eb-95e7-5c217b410f1c.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121654649-86e38c80-cad0-11eb-95e7-5c217b410f1c.png" alt="Cover" width="50%"/>
 
 Fig. 10. Decompressed Row IQ Data
 
@@ -106,7 +106,7 @@ Fig. 10. Decompressed Row IQ Data
 Download the channel estimation file package, which is about 98 MB. Decompress it to get the following files.
 
 <img src="https://user-images.githubusercontent.com/42632656/121654687-9236b800-cad0-11eb-9202-d0a629a8d6df.png" alt="Cover" width="20%"/>
-<img src="https://user-images.githubusercontent.com/42632656/121654698-94007b80-cad0-11eb-9333-6b04a2a29d43.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121654698-94007b80-cad0-11eb-9333-6b04a2a29d43.png" alt="Cover" width="50%"/>
 
 Fig. 11. Channel Estimation Program Folder
 
@@ -119,7 +119,7 @@ Fig. 11. Channel Estimation Program Folder
 (4)	*.dll files are the needed utils for channel estimation. Since the Intel company provides the Math Kernel Library database, the computer CPU demands to be the Intel product.
 
 
-<img src="https://user-images.githubusercontent.com/42632656/121654739-9ebb1080-cad0-11eb-8728-d9127886c047.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121654739-9ebb1080-cad0-11eb-8728-d9127886c047.png" alt="Cover" width="50%"/>
 Fig. 12. Put Depressed Row IQ Data in YPDSCH Folder
 
 ### 3.2.2  C Language Operating Instructions
@@ -132,12 +132,12 @@ After executing Channel_est.exe, enter two kinds of values.
 Ensuring the YPDSCH folder contains the corresponding *.dat files to transform the data
 
 <img src="https://user-images.githubusercontent.com/42632656/121654798-af6b8680-cad0-11eb-923e-617abb562a30.png" alt="Cover" width="20%"/>
-<img src="https://user-images.githubusercontent.com/42632656/121654844-b98d8500-cad0-11eb-8f50-08b59a04ecb2.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121654844-b98d8500-cad0-11eb-8f50-08b59a04ecb2.png" alt="Cover" width="50%"/>
 Fig. 13. Execute C Language Program Channel_est.exe
 
 After finishing the execution, you can switch to the HPDSCH folder to capture the channel information. For the storage format, please take 3.4 for reference. The storage format can be further transformed into cell format from the Channel_est.m
 
-<img src="https://user-images.githubusercontent.com/42632656/121654923-cb6f2800-cad0-11eb-9808-a446653d42df.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121654923-cb6f2800-cad0-11eb-9808-a446653d42df.png" alt="Cover" width="50%"/>
 
 Fig. 14. Produce Channel Information Data in HPDSCH Folder
 
@@ -153,13 +153,13 @@ After executing Channel_est.exe, enter two kinds of values.
 Ensuring the HPDSCH folder contains the corresponding *.dat files to transform the data
 
 <img src="https://user-images.githubusercontent.com/42632656/121655052-e5a90600-cad0-11eb-9b87-bcb5674b517f.png" alt="Cover" width="20%"/>
-<img src="https://user-images.githubusercontent.com/42632656/121655061-e8a3f680-cad0-11eb-96e4-6f168d4ec64e.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121655061-e8a3f680-cad0-11eb-96e4-6f168d4ec64e.png" alt="Cover" width="50%"/>
 Fig. 15. Execute Matlab Program Channel_est.m
 
 It will display each record's execution time when running the program and then save the results to the HPDSCH_mat folder. Each record is saved in the cell format. The number of channels for each cell is 1620 multiply the number of symbols. The following takes 10 records as an example.
 
 <img src="https://user-images.githubusercontent.com/42632656/121655162-fa859980-cad0-11eb-8845-4db0236552a6.png" alt="Cover" width="20%"/>
-<img src="https://user-images.githubusercontent.com/42632656/121655185-feb1b700-cad0-11eb-89f6-dc2c7a9923a0.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121655185-feb1b700-cad0-11eb-89f6-dc2c7a9923a0.png" alt="Cover" width="50%"/>
 Fig. 16. Produce Channel Information Data in HPDSCH_mat Folder
 
 
@@ -167,11 +167,11 @@ Fig. 16. Produce Channel Information Data in HPDSCH_mat Folder
 ### 3.3.1  *.dat Channel Access Format
 The channel information is accessible from the first piece of the first record of the terminal, arranged according to h_1,1, h_1,2, … h_1,16. The second piece immediately following the first piece, arranged as h_2,1, h_2,2, … h_2,16. The procedure is repeated to the 20th piece, arranged as h_20,1, h_20,2, … h_20,16. Each piece of channel information of each record contains 1620×112 sub-carriers, which are accessed in a vertical direction, arranged as sub-carrier-1, …, to sub-carrier-181439. Each sub-carrier contains two floating numbers, represent the real and imaginary number of the sub-carrier, respectively. In conclusion, each HPDSCH_iqdata1_ch storages 2×181440×16 = 5806080 floating numbers.
 
-<img src="https://user-images.githubusercontent.com/42632656/121655216-04a79800-cad1-11eb-88c4-a7bce00b124c.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121655216-04a79800-cad1-11eb-88c4-a7bce00b124c.png" alt="Cover" width="50%"/>
 
 Fig. 17. Channel Access Configuration Diagram
 
-<img src="https://user-images.githubusercontent.com/42632656/121655226-0709f200-cad1-11eb-849c-dde579a32e1a.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121655226-0709f200-cad1-11eb-849c-dde579a32e1a.png" alt="Cover" width="50%"/>
 
 Fig. 18. MIMO System Diagram
 
@@ -179,9 +179,9 @@ Fig. 18. MIMO System Diagram
 The vertical direction represents the 20 Rx antennas, while the horizontal direction represents the 16 Tx antennas. Each contains 1620×Num_of_symbol sub-carriers.
 
 <img src="https://user-images.githubusercontent.com/42632656/121655255-0b360f80-cad1-11eb-9cc2-c4aea3639a6d.png" alt="Cover" width="20%"/>
-<img src="https://user-images.githubusercontent.com/42632656/121655274-0e310000-cad1-11eb-9cf5-d1c9baf39c44.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121655274-0e310000-cad1-11eb-9cf5-d1c9baf39c44.png" alt="Cover" width="50%"/>
 Fig. 19. Channel Access Configuration Diagram
 
-<img src="https://user-images.githubusercontent.com/42632656/121655282-0ffac380-cad1-11eb-8850-d723d20ee747.png" alt="Cover" width="75%"/>
+<img src="https://user-images.githubusercontent.com/42632656/121655282-0ffac380-cad1-11eb-8850-d723d20ee747.png" alt="Cover" width="50%"/>
 
 Fig. 20. MIMO System Diagram
