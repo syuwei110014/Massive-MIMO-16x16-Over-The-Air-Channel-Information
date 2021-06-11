@@ -91,6 +91,7 @@ Fig. 5. Measured environment with the centralized base station
 <p align="center">
 Fig. 6. Measured environment with the distributed base station
 </p>
+
 ## 2.3  Centralized Base Station + Folding Terminal
 <p align="center">
 <img src="https://user-images.githubusercontent.com/42632656/121653132-efca0500-cace-11eb-9604-ea2c0ea02016.png" alt="Cover" width="75%"/>
@@ -100,6 +101,7 @@ Fig. 6. Measured environment with the distributed base station
 <p align="center">
 Fig. 7. Measured environment with the centralized base station
 </p>
+
 ## 2.4  Distributed Base Station + Folding Terminal
 <p align="center">
 <img src="https://user-images.githubusercontent.com/42632656/121653167-f5bfe600-cace-11eb-8c07-9228af8a1ca1.png" alt="Cover" width="75%"/>
@@ -145,7 +147,8 @@ Download the channel estimation file package, which is about 98 MB. Decompress i
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/42632656/121654687-9236b800-cad0-11eb-9202-d0a629a8d6df.png" alt="Cover" width="20%"/>
-    
+</p>
+<p align="center">
 <img src="https://user-images.githubusercontent.com/42632656/121654698-94007b80-cad0-11eb-9333-6b04a2a29d43.png" alt="Cover" width="50%"/>
 </p>
 
