@@ -1,15 +1,15 @@
 # User Manual
 This web page provides the measured channel matrices of the MIMO-OFDM system with 16 transmit antennas and 20 receiver antennas.
-### 1. Frame Architecure
+#### 1. Frame Architecure
     1.1	Time & Frequency Domain Specification
     1.2	Noise Regularization
     1.3	Data Conversion Process
-### 2. Scenarios Description
+#### 2. Scenarios Description
     2.1	Centralized Base Station + Non-Folding Terminal
     2.2	Distributed Base Station + Non-Folding Terminal
     2.3	Centralized Base Station + Folding Terminal
     2.2	Distributed Base Station + Folding Terminal
-### 3. Operating Instructions
+#### 3. Operating Instructions
     3.1	Download the OTA measurement
     3.2	Channel Estimation
             3.2.1  Download Channel Estimation Package
@@ -22,7 +22,7 @@ This web page provides the measured channel matrices of the MIMO-OFDM system wit
 
 
 
-# 1)  Frame Architecure
+# 1.  Frame Architecure
 ## 1.1  Time & Frequency Domain Specification
 The OFDM system consists of 40 slots per frame, which have 560 symbols in total. Here, we take only eight slots per frame, 112 symbols, and each symbol contains 1620 sub-carriers.
 
@@ -66,7 +66,7 @@ Fig. 4. Flow chart of file transformation process
 
 
 
-# 2)  Scenarios Description
+# 2.  Scenarios Description
 In this section, we shows the measurement scenarios.
 ## 2.1  Centralized Base Station + Non-Folding Terminal
 
@@ -117,7 +117,7 @@ Fig. 8. Measured environment with the distributed base station
 
 
 
-# 3)  Operating Instructions
+# 3.  Operating Instructions
 Section 3 will guide you on downloading the raw data file, transforming it to the channel matrices, and converting them into *.mat type (used by MATLAB). The user manual outline is as follows.
 ## 3.1  Download the OTA measurements
 To download the original time-domain IQ compressed data, please link to the following link. Since the data is massive for each scenario, we partition the data into five parts (namely, part1, part2, …, part5 ).
