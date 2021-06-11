@@ -35,13 +35,13 @@ Fig. 1. Time Domain Transmission Specification
 Fig. 2. Frequency Domain Specification
 
 ## 1.2	Noise Regularization
-  The received signal has already been regularized according to the noise level and is shown in Fig. 3. 
+The received signal has already been regularized according to the noise level and is shown in Fig. 3. 
 
 <img src="https://user-images.githubusercontent.com/42632656/121651633-6a922080-cacd-11eb-8826-55c9bd9b7b84.png" alt="Cover" width="50%"/>
 
 Fig. 3. Regularized Received Signal
 ## 1.3	Data Conversion Process
-  For the detailed conversion process, please refer to Section 3. Fig. 4 shows the flow chart of the file transformation process. In the beginning, you’ll get *.dat format IQ data file after decompressing the downloaded data, this part show in Section 3.1. Then, we used C program to perform channel estimation and save the results as .dat format. Finally, we operate Matlab to convert them as .mat format, making it easier to use. The method to use the program is shown in Section 3.2. More detailed saving format description show in Section 3.3.
+For the detailed conversion process, please refer to Section 3. Fig. 4 shows the flow chart of the file transformation process. In the beginning, you’ll get *.dat format IQ data file after decompressing the downloaded data, this part show in Section 3.1. Then, we used C program to perform channel estimation and save the results as .dat format. Finally, we operate Matlab to convert them as .mat format, making it easier to use. The method to use the program is shown in Section 3.2. More detailed saving format description show in Section 3.3.
 
 <img src="https://user-images.githubusercontent.com/42632656/121652227-03c13700-cace-11eb-910e-45c344671925.png" alt="Cover" width="75%"/>
 
@@ -64,29 +64,84 @@ Fig. 5. Measured environment with the centralized base station
 <img src="https://user-images.githubusercontent.com/42632656/121653004-d32dcd00-cace-11eb-81f2-336b0449ab69.png" alt="Cover" width="75%"/>
 <img src="https://user-images.githubusercontent.com/42632656/121653107-eb9de780-cace-11eb-9299-e073fe69a994.png" alt="Cover" width="75%"/>
 
-Fig. 5. Measured environment with the centralized base station
+Fig. 6. Measured environment with the distributed base station
 
 ## 2.3	Centralized Base Station + Folding Terminal
 
 <img src="https://user-images.githubusercontent.com/42632656/121653132-efca0500-cace-11eb-9604-ea2c0ea02016.png" alt="Cover" width="75%"/>
 <img src="https://user-images.githubusercontent.com/42632656/121653151-f2c4f580-cace-11eb-97c4-f3a31d27e98f.png" alt="Cover" width="75%"/>
 
-Fig. 5. Measured environment with the centralized base station
+Fig. 7. Measured environment with the centralized base station
 
-## 2.2	Distributed Base Station + Folding Terminal
+## 2.4	Distributed Base Station + Folding Terminal
 
 <img src="https://user-images.githubusercontent.com/42632656/121653167-f5bfe600-cace-11eb-8c07-9228af8a1ca1.png" alt="Cover" width="75%"/>
 <img src="https://user-images.githubusercontent.com/42632656/121653169-f789a980-cace-11eb-9e68-9ded94d86004.png" alt="Cover" width="75%"/>
 
-Fig. 5. Measured environment with the centralized base station
+Fig. 8. Measured environment with the distributed base station
+****
 
 
 
+# 3) Operating Instructions
+  Section 3 will guide you on downloading the raw data file, transforming it to the channel matrices, and converting them into *.mat type (used by MATLAB). The user manual outline is as follows.
+## 3.1	Download the OTA measurements
+  To download the original time-domain IQ compressed data, please link to the following link. Since the data is massive for each scenario, we partition the data into five parts (namely, part1, part2, …, part5 ).
+<https://drive.google.com/drive/folders/19RdM7rw7qJ7H8oF_SvNw9flN1NMv1CTi?usp=sharing>
+
+<img src="https://user-images.githubusercontent.com/42632656/121653837-af1ebb80-cacf-11eb-87c9-00f1f1f799e4.png" alt="Cover" width="50%"/>
+
+Fig. 9. Compressed Row IQ Data
+Download the data of your desire scenario, and then decompress it to get the following IQ data files. Each scenario contains about 1000 records of the received signal, which is from iqdata1 to iqdata1000. Each record contains 20 Rx channels. All the data are stored in the time domain IQ data format. Iqdata1 represents the first record, ch20 represents the 20th Rx antenna of the first record.
+
+<img src="" alt="Cover" width="75%"/>
+
+Fig. 10. Decompressed Row IQ Data
+
+## 3.2	Channel Estimation
+### 3.2.1 Download Channel Estimation Package
+Download the channel estimation file package, which is about 98 MB. Decompress it to get the following files.
+
+<img src="" alt="Cover" width="75%"/>
+
+Fig. 11. Channel Estimation Program Folder
+
+(1)	Data contains the required parameters for the channel estimation.
+(2)	HPDSCH folder puts the execution results, which is channel IQ data.
+(3)	YPDSCH folder puts the data from 3.1. The data is shown in Fig. 12.
+(4)	*.dll files are the needed utils for channel estimation. Since the Intel company provides the Math Kernel Library database, the computer CPU demands to be the Intel product.
+
+Fig. 12. Put Depressed Row IQ Data in YPDSCH Folder
+
+### 3.2.2 C Language Operating Instructions
+After executing Channel_est.exe, enter two kinds of values.
+(1)	Start from iqdata: represents to access channel from which records.
+(2)	Num. of iqdata: represents the number of channels to be accessed.
+# Ensuring the YPDSCH folder contains the corresponding *.dat files to transform the data
+
+Fig. 13. Execute C Language Program Channel_est.exe
+
+After finishing the execution, you can switch to the HPDSCH folder to capture the channel information. For the storage format, please take 3.4 for reference. The storage format can be further transformed into cell format from the Channel_est.m
+
+Fig. 14. Produce Channel Information Data in HPDSCH Folder
+
+### 3.2.3 Matlab Operating Instructions
+After executing Channel_est.exe, enter two kinds of values.
+(1)	Start from iqdata : represents to access channel from which records.
+(2)	Num. of iqdata : represents the number of channels to be accessed.
+(3)	Num. of symbol : represents the number of symbols to be saved.
+Ensuring the HPDSCH folder contains the corresponding *.dat files to transform the data
+
+Fig. 15. Execute Matlab Program Channel_est.m
+
+It will display each record's execution time when running the program and then save the results to the HPDSCH_mat folder. Each record is saved in the cell format. The number of channels for each cell is 1620 multiply the number of symbols. The following takes 10 records as an example.
+
+Fig. 16. Produce Channel Information Data in HPDSCH_mat Folder
 
 
-
-
-
+## 3.3 Channel Access Format
+### 3.3.1 *.dat Channel Access Format
+The channel information is accessible from the first piece of the first record of the terminal, arranged according to h_1,1, h_1,2, … h_1,16. The second piece immediately following the first piece, arranged as h_2,1, h_2,2, … h_2,16. The procedure is repeated to the 20th piece, arranged as h_20,1, h_20,2, … h_20,16. Each piece of channel information of each record contains 1620×112 sub-carriers, which are accessed in a vertical direction, arranged as sub-carrier-1, …, to sub-carrier-181439. Each sub-carrier contains two floating numbers, represent the real and imaginary number of the sub-carrier, respectively. In conclusion, each HPDSCH_iqdata1_ch storages 2×181440×16 = 5806080 floating numbers.
 
 
 
