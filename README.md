@@ -21,6 +21,11 @@ This web page provides the measured channel matrices of the MIMO-OFDM system wit
 ****
 # 1. Frame Architecure
 ## 1.1	Time & Frequency Domain Specification
+  The OFDM system consists of 40 slots per frame, which have 560 symbols in total. Here, we take only eight slots per frame, 112 symbols, and each symbol contains 1620 sub-carriers.
+
+<img src="https://user-images.githubusercontent.com/42632656/121650291-028f0a80-cacc-11eb-9674-201488cf8a3a.png" alt="Cover" width="67%"/><img src="https://user-images.githubusercontent.com/42632656/121650338-0e7acc80-cacc-11eb-807c-f6c277d56697.png" alt="Cover" width="33%"/>
+
+Fig. 1. Time Domain Transmission Specification
 
 ## 1.2	Noise Regularization
 
