@@ -1,4 +1,4 @@
-# User Manual
+# Outline
 This web page provides the measured channel matrices of the MIMO-OFDM system with 16 transmit antennas and 20 receiver antennas.
 #### 1. Frame Architecure
     1.1	Time & Frequency Domain Specification
