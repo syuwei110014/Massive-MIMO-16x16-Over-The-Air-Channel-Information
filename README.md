@@ -279,18 +279,18 @@ Fig. 20. MIMO System Diagram
 
 (c) e-mail: syuwei110014@gmail.com, chaokai.wen@mail.nsysu.edu.tw
 
-    @InProceedings{Chen-Wei2021, 
+        @InProceedings{Chen-Wei2021, 
 
-    author={Chen-Wei Syu},
+        author={Chen-Wei Syu},
 
-    title={Adaptive Dynamic Hypernet for Parameter Optimization of Multi-Input Multi-Output Detector},
+        title={Adaptive Dynamic Hypernet for Parameter Optimization of Multi-Input Multi-Output Detector},
 
-    booktitle={Unpublished master's thesis},
+        booktitle={Unpublished master's thesis},
 
-    year={2021},
+        year={2021},
 
-    month={Jul},
+        month={Jul},
 
-    Address={National Sun Yat-sen University CTLAB9029, Taiwan},
+        Address={National Sun Yat-sen University CTLAB9029, Taiwan},
 
-    }
+        }
