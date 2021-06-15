@@ -285,7 +285,7 @@ Fig. 20. MIMO System Diagram
 
     title={Adaptive Dynamic Hypernet for Parameter Optimization of Multi-Input Multi-Output Detector},
 
-    booktitle ={Unpublished master's thesis},
+    booktitle={Unpublished master's thesis},
 
     year={2021},
 
