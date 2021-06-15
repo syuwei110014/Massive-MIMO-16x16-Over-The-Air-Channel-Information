@@ -279,7 +279,7 @@ Fig. 20. MIMO System Diagram
 
 (c) e-mail: syuwei110014@gmail.com, chaokai.wen@mail.nsysu.edu.tw
 
-    @mastersthesis{Chen-Wei2021, 
+    @mastersthesis{Master’s thesis, 
 
     author={Chen-Wei Syu},
 
