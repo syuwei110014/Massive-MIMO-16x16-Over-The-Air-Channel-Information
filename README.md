@@ -1,7 +1,3 @@
-# Massive MIMO 16x16 Over The Air Channel Information
-© 2021 Chen-Wei Syu, Chao-Kai Wen
-
-© syuwei110014@gmail.com, chaokai.wen@mail.nsysu.edu.tw
 # Outline
 This web page provides the measured channel matrices of the MIMO-OFDM system with 16 transmit antennas and 20 receiver antennas.
 #### 1. Frame Architecure
@@ -277,3 +273,9 @@ Fig. 19. Channel Access Configuration Diagram
 <p align="center">
 Fig. 20. MIMO System Diagram
 </p>
+
+# License
+(c) 2021 Chen-Wei Syu, Chao-Kai Wen
+
+(c) e-mail: syuwei110014@gmail.com, chaokai.wen@mail.nsysu.edu.tw
+
